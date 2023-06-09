@@ -95,7 +95,7 @@ public class BackupActivity extends AppCompatActivity {
             ObjectOutputStream output;
             try {
                 //noinspection deprecation
-                prefs = activity.getSharedPreferences(Constants.PREFS, Context.MODE_WORLD_READABLE);
+                prefs = activity.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
             } catch (SecurityException e) {
                 Utils.showToast(activity, Pair.of(e.getMessage(), 0), null, Toast.LENGTH_LONG);
                 activity.finish();
@@ -137,7 +137,7 @@ public class BackupActivity extends AppCompatActivity {
             ObjectInputStream input;
             try {
                 //noinspection deprecation
-                prefs = activity.getSharedPreferences(Constants.PREFS, Context.MODE_WORLD_READABLE);
+                prefs = activity.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
             } catch (SecurityException e) {
                 Utils.showToast(activity, Pair.of(e.getMessage(), 0), null, Toast.LENGTH_LONG);
                 activity.finish();

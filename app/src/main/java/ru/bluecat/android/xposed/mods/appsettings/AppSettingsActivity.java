@@ -80,7 +80,7 @@ public class AppSettingsActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		try {
 			//noinspection deprecation
-			prefs = getSharedPreferences(Constants.PREFS, Context.MODE_WORLD_READABLE);
+			prefs = getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
 		} catch (SecurityException e) {
 			Utils.showToast(this, Pair.of(e.getMessage(), 0), null, Toast.LENGTH_LONG);
 			finish();

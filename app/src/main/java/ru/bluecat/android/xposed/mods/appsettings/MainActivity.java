@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 		}
 		try {
 			//noinspection deprecation
-			prefs = this.getSharedPreferences(Constants.PREFS, Context.MODE_WORLD_READABLE);
+			prefs = this.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
 		} catch (SecurityException e) {
 			Utils.showToast(this, Pair.of(e.getMessage(), 0), null, Toast.LENGTH_LONG);
 			finish();
@@ -331,7 +331,7 @@ public class MainActivity extends AppCompatActivity {
 		// Refresh preferences
 		try {
 			//noinspection deprecation
-			prefs = activityContext.getSharedPreferences(Constants.PREFS, Context.MODE_WORLD_READABLE);
+			prefs = activityContext.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
 		} catch (SecurityException e) {
 			Utils.showToast(activityContext, Pair.of(e.getMessage(), 0), null, Toast.LENGTH_LONG);
 			activityContext.finish();
@@ -742,7 +742,7 @@ public class MainActivity extends AppCompatActivity {
 			}
 			try {
 				//noinspection deprecation
-				prefs = activityReference.getSharedPreferences(Constants.PREFS, Context.MODE_WORLD_READABLE);
+				prefs = activityReference.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
 			} catch (SecurityException e) {
 				Utils.showToast(activityReference, Pair.of(e.getMessage(), 0), null, Toast.LENGTH_LONG);
 				activityReference.finish();
