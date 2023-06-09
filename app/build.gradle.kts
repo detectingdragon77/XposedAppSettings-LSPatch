@@ -6,6 +6,8 @@ android {
     namespace = "ru.bluecat.android.xposed.mods.appsettings"
     compileSdk = 33
 
+    buildToolsVersion = "32.0.0"
+
     defaultConfig {
         applicationId = "ru.bluecat.android.xposed.mods.appsettings"
         minSdk = 27
