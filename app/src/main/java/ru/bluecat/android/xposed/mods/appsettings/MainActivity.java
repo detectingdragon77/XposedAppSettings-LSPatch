@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(!isModuleActive()) {
+		if(false && !isModuleActive()) { // disable this check for LSPatch and similiar solutions
 			frameworkWarning(this);
 			return;
 		}
